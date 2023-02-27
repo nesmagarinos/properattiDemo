@@ -39,7 +39,7 @@ font="sans serif"
 # In[5]:
 
 
-st.header("Tazador de propiedades")
+st.header("Tasador de propiedades")
 
 st.subheader("Características de la propiedad")
 col1, col2 = st.columns(2)
@@ -142,7 +142,7 @@ def predict():
 # In[46]:
 
 
-if st.button("Tazar propiedad"):
+if st.button("Tasar propiedad"):
         st.balloons()
         st.success(f"El valor de la propiedad es de USD {predict()}")
 
