@@ -6,7 +6,6 @@
 
 import numpy as np
 import pandas as pd
-import locale
 import pickle
 import statsmodels
 import streamlit as st
@@ -134,8 +133,7 @@ def predict():
     
     result = int(result[0]/1000)*1000
     
-    locale.setlocale(locale.LC_ALL, 'es_AR')
-    result = locale.currency(result, symbol=True, grouping=True, international=False)[:-3]
+    result = "{:,}".format(result).replace(",",".")
 
     
     return result
@@ -146,7 +144,7 @@ def predict():
 
 if st.button("Tazar propiedad"):
         st.balloons()
-        st.success(f"El valor de la propiedad es de {predict()}")
+        st.success(f"El valor de la propiedad es de USD {predict()}")
 
 
 # In[ ]:
