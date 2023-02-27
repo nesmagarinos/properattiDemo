@@ -17,7 +17,7 @@ import streamlit as st
 
 path="C:/Users/nesma/Documents/Consultora/SitioWeb/Demos/DataScience/"
 
-
+model = pickle.load(open(path+"properattiModel.sav", 'rb'))
 # In[3]:
 
 
@@ -128,7 +128,6 @@ def predict():
 
     Xtest.fillna(0,inplace=True)
     
-    model = pickle.load(open(path+"properattiModel.sav", 'rb'))
     prediction_sm = model.predict(Xtest)
     
     result=prediction_sm*newInput['surface_total_in_m2_clean']
