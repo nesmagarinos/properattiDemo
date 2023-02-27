@@ -9,16 +9,13 @@ import pandas as pd
 import locale
 import pickle
 import streamlit as st
-import bz2file as bz2
 
 
 # In[2]:
 
 
 path="C:/Users/nesma/Documents/Consultora/SitioWeb/Demos/DataScience/"
-model = bz2.BZ2File(path+"properattiModel.pbz2", 'rb')
-model = pickle.load(model)
-
+model = pickle.load("properattiModel.sav", 'rb')
 # In[3]:
 
 
