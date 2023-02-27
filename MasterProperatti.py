@@ -15,7 +15,7 @@ import streamlit as st
 # In[2]:
 
 
-path="C:/Users/nesma/Documents/Consultora/SitioWeb/Demos/DataScience/"
+path=""
 model = pickle.load(open("properattiModel.sav", 'rb'))
 # In[3]:
 
