@@ -8,6 +8,7 @@ import numpy as np
 import pandas as pd
 import locale
 import pickle
+import statsmodels
 import streamlit as st
 
 
